@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Recipe Book</h1>
+    </header>
+
+    <main>
+        <section id="add-recipe-section">
+            <h2>Add New Recipe</h2>
+            <form id="recipe-form">
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" required>
+
+                <label for="recipe-image">Image URL:</label>
+                <input type="url" id="recipe-image" placeholder="Optional: URL of an image">
+
+                <label for="recipe-ingredients">Ingredients (one per line):</label>
+                <textarea id="recipe-ingredients" rows="6" required></textarea>
+
+                <label for="recipe-instructions">Preparation Steps (one per line):</label>
+                <textarea id="recipe-instructions" rows="10" required></textarea>
+
+                <button type="submit">Add Recipe</button>
+            </form>
+        </section>
+
+        <section id="search-section">
+            <h2>Search Recipes</h2>
+            <input type="text" id="search-input" placeholder="Search by name or ingredient...">
+        </section>
+
+        <section id="recipe-list-section">
+            <h2>Your Recipes</h2>
+            <div id="recipes-container">
+                <p>No recipes added yet. Add one above!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Recipe Book</p>
+    </footer>
+
+    <div id="recipe-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="detail-name"></h3>
+            <img id="detail-image" src="" alt="Recipe Image">
+            <h4>Ingredients:</h4>
+            <ul id="detail-ingredients"></ul>
+            <h4>Instructions:</h4>
+            <ol id="detail-instructions"></ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
